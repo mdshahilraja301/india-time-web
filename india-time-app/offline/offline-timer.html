@@ -1,0 +1,313 @@
+<DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Offline Timer</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/offline-timer.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="liquid-bg">
+        <div class="blob blob-one"></div>
+        <div class="blob blob-two"></div>
+        <div class="blob blob-three"></div>
+        <div class="blob blob-four"></div>
+    </div>
+
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <span>🇮🇳</span>
+
+            <span>India Time</span>
+
+            <small>OFFLINE</small>
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="../offline.html">
+                 📴 Offline
+            </a>
+
+            <a
+                href="./offline-timer.html"
+                class="active"
+            >
+                ⏱️ Timer
+            </a>
+
+            <a href="./offline-alarm.html">
+                ⏰ Alarm
+            </a>
+
+            <a href="../index.html">
+                🌐 Online
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <main class="container">
+
+        <section class="timer-card">
+
+            <div class="card-glow"></div>
+
+
+            <div class="card-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        📴 OFFLINE MODE
+                    </p>
+
+                    <h1>
+                        Timer
+                    </h1>
+
+                    <p class="subtitle">
+                        Works without internet
+                    </p>
+
+                </div>
+
+
+                <div class="offline-badge">
+
+                    <span></span>
+
+                    OFFLINE
+
+                </div>
+
+            </div>
+
+
+            <div class="timer-display">
+
+                <div id="timer-display">
+                    00:00:00
+                </div>
+
+                <p id="timer-status">
+                    Ready
+                </p>
+
+            </div>
+
+
+            <div class="timer-inputs">
+
+                <div class="input-group">
+
+                    <label for="hours">
+                        Hours
+                    </label>
+
+                    <input
+                        type="number"
+                        id="hours"
+                        min="0"
+                        max="99"
+                        value="0"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="minutes">
+                        Minutes
+                    </label>
+
+                    <input
+                        type="number"
+                        id="minutes"
+                        min="0"
+                        max="59"
+                        value="5"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="seconds">
+                        Seconds
+                    </label>
+
+                    <input
+                        type="number"
+                        id="seconds"
+                        min="0"
+                        max="59"
+                        value="0"
+                    >
+
+                </div>
+
+            </div>
+
+
+           
+            <div class="tone-section">
+
+                <label for="timer-tone">
+                    🔊 Timer Tone
+                </label>
+
+
+                <div class="tone-row">
+
+                    <select id="timer-tone">
+
+                        <option
+                            value="default"
+                            selected
+                        >
+                            🔔 Default Timer Tone
+                        </option>
+
+                        <option value="my-tone">
+                            ➕ ADD Tone
+                        </option>
+
+                    </select>
+
+
+                    <button
+                        type="button"
+                        id="preview-tone-btn"
+                        class="preview-tone-btn"
+                    >
+                        ▶ Preview
+                    </button>
+
+                </div>
+
+
+                <input
+                    type="file"
+                    id="custom-tone"
+                    accept=".mp3,audio/mpeg"
+                    hidden
+                >
+
+
+                <p
+                    id="selected-tone"
+                    class="selected-tone"
+                >
+                    Default timer tone selected
+                </p>
+
+            </div>
+
+
+            <div class="timer-buttons">
+
+                <button
+                    id="start-btn"
+                    class="btn primary"
+                >
+                    ▶ Start
+                </button>
+
+
+                <button
+                    id="pause-btn"
+                    class="btn secondary"
+                    disabled
+                >
+                    ⏸ Pause
+                </button>
+
+
+                <button
+                    id="reset-btn"
+                    class="btn danger"
+                >
+                    ↻ Reset
+                </button>
+
+            </div>
+
+
+            <div class="timer-info">
+
+                <div class="info-item">
+
+                    <span>📴</span>
+
+                    <div>
+
+                        <strong>
+                            Offline Timer
+                        </strong>
+
+                        <small>
+                            Internet not required
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>💾</span>
+
+                    <div>
+
+                        <strong>
+                            Auto Saved
+                        </strong>
+
+                        <small>
+                            Navigation won't reset timer
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="../js/offline/offline-timer.js"
+    ></script>
+
+</body>
+
+</html>

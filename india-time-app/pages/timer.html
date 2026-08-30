@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Timer • India Time</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/timer.css">
+</head>
+
+<body>
+
+    <!-- Liquid Background -->
+    <div class="liquid-bg">
+        <div class="blob blob-one"></div>
+        <div class="blob blob-two"></div>
+        <div class="blob blob-three"></div>
+        <div class="blob blob-four"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            <span class="india-icon">🇮🇳</span>
+            <span>India Time</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="../index.html">
+                <span>🕐</span>
+                Time & Date
+            </a>
+
+            <a href="./timer.html" class="active">
+                <span>⏱️</span>
+                Timer
+            </a>
+
+            <a href="./alarm.html">
+                <span>⏰</span>
+                Alarm
+            </a>
+
+            <a href="/india-time-app/offline.html">
+                📴 Offline
+            </a>
+
+            
+
+        </div>
+
+    </nav>
+
+    <!-- Timer -->
+    <main class="timer-container">
+
+        <section class="timer-card">
+
+            <div class="timer-header">
+                <p class="timer-label">COUNTDOWN TIMER</p>
+
+                <h1>Set Your Timer</h1>
+
+                <p class="timer-description">
+                    Choose how long you want the timer to run.
+                </p>
+            </div>
+
+            <!-- Time Inputs -->
+            <div class="time-inputs">
+
+                <div class="input-group">
+                    <label for="hours">Hours</label>
+
+                    <input
+                        type="number"
+                        id="hours"
+                        min="0"
+                        max="99"
+                        value="0"
+                        inputmode="numeric"
+                    >
+                </div>
+
+                <span class="input-separator">:</span>
+
+                <div class="input-group">
+                    <label for="minutes">Minutes</label>
+
+                    <input
+                        type="number"
+                        id="minutes"
+                        min="0"
+                        max="59"
+                        value="5"
+                        inputmode="numeric"
+                    >
+                </div>
+
+                <span class="input-separator">:</span>
+
+                <div class="input-group">
+                    <label for="seconds">Seconds</label>
+
+                    <input
+                        type="number"
+                        id="seconds"
+                        min="0"
+                        max="59"
+                        value="0"
+                        inputmode="numeric"
+                    >
+                </div>
+
+            </div>
+
+            <!-- Countdown Display -->
+            <div
+                id="timer-display"
+                class="timer-display"
+                aria-live="polite"
+            >
+                00:05:00
+            </div>
+
+            <!-- Status -->
+            <p
+                id="timer-status"
+                class="timer-status"
+                aria-live="polite"
+            >
+                Ready
+            </p>
+
+            <!-- Controls -->
+            <div class="timer-controls">
+
+                <button
+                    type="button"
+                    id="start-btn"
+                    class="primary-btn"
+                >
+                    ▶ Start
+                </button>
+
+                <button
+                    type="button"
+                    id="pause-btn"
+                    class="secondary-btn"
+                    disabled
+                >
+                    ⏸ Pause
+                </button>
+
+                <button
+                    type="button"
+                    id="reset-btn"
+                    class="reset-btn"
+                >
+                    ↻ Reset
+                </button>
+
+            </div>
+
+            <!-- Sound Status -->
+            <div class="sound-info">
+                🔊 Timer sound will play when the countdown reaches zero.
+            </div>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="../js/timer/timer.js"></script>
+
+</body>
+
+</html>

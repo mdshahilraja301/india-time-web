@@ -1,0 +1,493 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Alarm • India Time</title>
+
+
+    <!-- MAIN CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+
+    <!-- ALARM CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/alarm.css"
+    >
+
+</head>
+
+
+<body>
+
+
+   
+
+    <div class="liquid-bg">
+
+        <div class="blob blob-one"></div>
+
+        <div class="blob blob-two"></div>
+
+        <div class="blob blob-three"></div>
+
+        <div class="blob blob-four"></div>
+
+    </div>
+
+
+
+   
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <span class="india-icon">
+                🇮🇳
+            </span>
+
+            <span>
+                India Time
+            </span>
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="../index.html">
+                🕐 Time & Date
+            </a>
+
+
+            <a href="./timer.html">
+                ⏱️ Timer
+            </a>
+
+
+            <a
+                href="./alarm.html"
+                class="active"
+            >
+                ⏰ Alarm
+            </a>
+
+            <a href="/india-time-app/offline.html">
+                📴 Offline
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    
+
+    <main class="alarm-container">
+
+
+        <section class="alarm-card">
+
+
+            <!-- HEADER -->
+
+            <div class="alarm-header">
+
+                <div class="alarm-icon-large">
+                    ⏰
+                </div>
+
+                <p class="alarm-label">
+                    INDIA STANDARD TIME
+                </p>
+
+                <h1>
+                    Set an Alarm
+                </h1>
+
+                <p class="alarm-description">
+                    Wake up on time with your selected alarm tone.
+                </p>
+
+            </div>
+
+
+
+            <!-- CURRENT IST -->
+
+            <div class="current-online-time">
+
+                <div class="ist-left">
+
+                    <span class="ist-flag">
+                        🇮🇳
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Current Indian Time
+                        </small>
+
+                        <strong>
+                            IST • UTC +05:30
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="ist-clock">
+
+                    <span id="current-ist">
+                        --:--:--
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FORM -->
+
+            <div class="alarm-form">
+
+
+                <!-- TIME -->
+
+                <div class="alarm-input-section">
+
+                    <label for="alarm-time">
+                        ⏰ Alarm Time
+                    </label>
+
+
+                    <input
+                        type="time"
+                        id="alarm-time"
+                        step="1"
+                    >
+
+                </div>
+
+
+
+                <!-- NAME -->
+
+                <div class="alarm-input-section">
+
+                    <label for="alarm-name">
+                        📝 Alarm Name
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="alarm-name"
+                        placeholder="Example: Wake Up / Class / Study"
+                        maxlength="40"
+                    >
+
+                </div>
+
+
+
+                <!-- TONE -->
+
+                <div class="alarm-input-section">
+
+                    <label for="alarm-tone">
+                        🎵 Alarm Tone
+                    </label>
+
+
+                    <div class="tone-row">
+
+
+                        <select
+                            id="alarm-tone"
+                        >
+
+                            <option
+                                value="classic"
+                                selected
+                            >
+                                🔔 Classic Beep
+                            </option>
+
+
+                            <option value="emergency">
+                                1. Emergency
+                            </option>
+
+
+                            <option value="morning">
+                                2. Morning
+                            </option>
+
+
+                            <option value="energetic">
+                                3. Energetic
+                            </option>
+
+
+                            <option value="student">
+                                4. Student Wake Up
+                            </option>
+
+
+                            <option value="school">
+                                5. School Bell
+                            </option>
+
+
+                            <option value="digital">
+                                6. Digital Alert
+                            </option>
+
+
+                            <option value="extreme">
+                                7. Extreme Wake Up
+                            </option>
+
+
+                            <option value="my-alarm">
+                                ➕ ADD Tone
+                            </option>
+
+                        </select>
+
+
+
+                        <button
+                            type="button"
+                            id="preview-tone-btn"
+                            class="preview-tone-btn"
+                        >
+                            ▶ Preview
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- CUSTOM MP3 -->
+
+                    <div
+                        id="custom-tone-wrapper"
+                        class="custom-tone-wrapper hidden"
+                        style="background-color: rgb(36, 29, 35)"
+                    >
+
+                        <div class="custom-tone-title">
+                            🔗 👇🏻 MP3
+                        </div>
+
+
+                        
+
+
+                        <input
+                            type="file"
+                            id="custom-tone"
+                            accept=".mp3,audio/mpeg"
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ADD -->
+
+                <button
+                    type="button"
+                    id="add-alarm-btn"
+                    class="add-alarm-btn"
+                >
+
+                    <span>
+                        ⏰
+                    </span>
+
+                    Add Alarm
+
+                </button>
+
+
+
+                <!-- STATUS -->
+
+                <p
+                    id="alarm-status"
+                    class="alarm-status"
+                >
+                    Connecting to India Time...
+                </p>
+
+
+            </div>
+
+
+
+            
+            <div class="alarm-list-section">
+
+
+                <div class="alarm-list-header">
+
+                    <div>
+
+                        <span class="list-small">
+                            SCHEDULED
+                        </span>
+
+                        <h2>
+                            Your Alarms
+                        </h2>
+
+                    </div>
+
+
+                    <span
+                        id="alarm-count"
+                        class="alarm-count"
+                    >
+                        0
+                    </span>
+
+                </div>
+
+
+
+                <div
+                    id="alarm-list"
+                    class="alarm-list"
+                >
+
+                    <div class="empty-alarm">
+
+                        <div class="empty-icon">
+                            ⏰
+                        </div>
+
+                        <h3>
+                            No alarms yet
+                        </h3>
+
+                        <p>
+                            Set your first alarm above.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- STOP -->
+
+            <button
+                type="button"
+                id="stop-alarm-btn"
+                class="stop-alarm-btn"
+                hidden
+            >
+                🔇 Stop Alarm
+            </button>
+
+
+
+            <!-- FOOTER -->
+
+            <div class="alarm-footer">
+
+                <span>
+                    🇮🇳 India Standard Time
+                </span>
+
+                <span>
+                    •
+                </span>
+
+                <span>
+                    Online Time
+                </span>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+   
+
+    <script
+        type="module"
+        src="../js/alarm/alarm.js"
+    ></script>
+
+
+    <script type="module">
+
+        import {
+            startGlobalOnlineAlarm,
+            unlockAlarmAudio
+        }
+        from "../js/alarm/alarm.js";
+
+
+        /*
+           Start global engine.
+        */
+
+        startGlobalOnlineAlarm();
+
+
+        /*
+           Unlock browser audio.
+        */
+
+        document.addEventListener(
+            "click",
+            () => {
+
+                unlockAlarmAudio();
+
+            },
+            {
+                once: true
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Offline Alarm • India Time</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/offline-alarm.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    
+     <!-- LIQUID BACKGROUND -->
+    
+
+    <div class="liquid-bg">
+
+        <div class="blob blob-one"></div>
+
+        <div class="blob blob-two"></div>
+
+        <div class="blob blob-three"></div>
+
+        <div class="blob blob-four"></div>
+
+    </div>
+
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+
+       
+
+        <div class="logo">
+
+            <span class="india-icon">
+                🇮🇳
+            </span>
+
+            <div class="logo-text">
+
+                <span>
+                    India Time
+                </span>
+
+                <small>
+                    Offline Mode
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- NAV LINKS -->
+
+        <div class="nav-links">
+
+
+            <a
+                href="../offline.html"
+            >
+
+                <span>
+                    📴 
+                </span>
+
+                Offline
+
+            </a>
+
+
+
+            <a
+                href="./offline-timer.html"
+            >
+
+                <span>
+                    ⏱️
+                </span>
+
+                Timer
+
+            </a>
+
+
+
+            <a
+                href="./offline-alarm.html"
+                class="active"
+            >
+
+                <span>
+                     ⏰
+                </span>
+
+                Alarm
+
+            </a>
+
+
+
+           
+
+            <a
+                href="../index.html"
+                class="online-link"
+            >
+
+                <span>
+                    🌐
+                </span>
+
+                Online
+
+            </a>
+
+
+        </div>
+
+    </nav>
+
+
+
+    
+    <main class="container">
+
+
+        <section class="alarm-card">
+
+
+            <!-- CARD GLOW -->
+
+            <div class="card-glow"></div>
+
+
+
+           
+
+            <div class="alarm-header">
+
+
+                <div>
+
+                    <p class="mode-label">
+                        📴 OFFLINE MODE
+                    </p>
+
+
+                    <h1>
+                        Alarm
+                    </h1>
+
+
+                    <p class="subtitle">
+                        Set an alarm using your
+                        laptop's system time.
+                    </p>
+
+                </div>
+
+
+
+                <!-- STATUS -->
+
+                <div class="offline-badge">
+
+                    <span class="offline-dot"></span>
+
+                    OFFLINE
+
+                </div>
+
+
+            </div>
+
+
+
+             
+
+            <div class="current-time-section">
+
+
+                <p>
+                    CURRENT TIME
+                </p>
+
+
+                <h2 id="current-time">
+                    <HH:MM:SS>--:--:--</HH:MM:SS>
+                </h2>
+
+
+                <div id="current-date">
+                    Loading date...
+                </div>
+
+
+            </div>
+
+
+
+             
+
+            <div class="alarm-setting">
+
+
+                <label for="alarm-time">
+
+                    ⏰ Set Alarm Time
+
+                </label>
+
+
+                <input
+                    type="time"
+                    id="alarm-time"
+                    step="1"
+                >
+
+
+                <button
+                    type="button"
+                    id="set-alarm-btn"
+                    class="primary-btn"
+                >
+
+                    ⏰ Set Alarm
+
+                </button>
+
+
+            </div>
+
+
+
+            
+
+            <div class="alarm-tone-section">
+
+
+                <label for="alarm-tone">
+
+                    🔊 Alarm Tone
+
+                </label>
+
+
+                <div class="tone-row">
+
+
+                    <select id="alarm-tone">
+
+
+                        <option
+                            value="classic"
+                            selected
+                        >
+                            🔔 Classic Beep 
+                        </option>
+
+
+                        <option value="emergency">
+                            1. Emergency 
+                        </option>
+
+
+                        <option value="morning">
+                            2. Morning 
+                        </option>
+
+
+                        <option value="energetic">
+                           3. Energetic 
+                        </option>
+
+
+                        <option value="my-alarm">
+                            ➕ ADD Tone
+                        </option>
+
+
+                    </select>
+
+
+
+                     <button
+                    type="button"
+                    id="choose-mp3-btn"
+                    class="choose-file-btn"
+                    style="background-color: black"
+                >
+                     🔗 👉🏻 <input
+                            type="file"
+                            id="custom-tone"
+                            accept=".mp3,audio/mpeg"
+                        >
+
+                    
+
+                </button>
+
+
+
+                    <button
+                        type="button"
+                        id="preview-tone-btn"
+                        class="secondary-btn"
+                        style="background-color: rgb(35, 172, 74)"
+                    >
+
+                        ▶ Preview
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- USER MP3 -->
+
+                <input
+                    type="file"
+                    id="custom-tone"
+                    accept=".mp3,audio/mpeg"
+                    hidden
+                >
+
+
+               
+
+
+                <p
+                    id="selected-file"
+                    class="selected-file"
+                >
+                    No custom alarm selected.
+                </p>
+
+
+            </div>
+
+
+
+           
+
+            <div
+                id="active-alarm-section"
+                class="active-alarm-section"
+            >
+
+
+                <div class="active-alarm-icon">
+                    ⏰
+                </div>
+
+
+                <div class="active-alarm-info">
+
+
+                    <span class="active-label">
+                        ACTIVE ALARM
+                    </span>
+
+
+                    <strong id="active-alarm-time">
+                        --:--:--
+                    </strong>
+
+
+                    <small id="alarm-countdown">
+                        Waiting...
+                    </small>
+
+
+                </div>
+
+
+
+                <button
+                    type="button"
+                    id="delete-alarm-btn"
+                    class="delete-btn"
+                >
+
+                    🗑️ Delete
+
+                </button>
+
+
+            </div>
+
+
+
+           
+            <div
+                id="alarm-message"
+                class="alarm-message"
+                hidden
+            >
+
+                <div class="alarm-ringing-icon">
+                    🔔
+                </div>
+
+
+                <h2>
+                    WAKE UP!
+                </h2>
+
+
+                <p>
+                    Your alarm is ringing.
+                </p>
+
+
+                <button
+                    type="button"
+                    id="stop-alarm-btn"
+                    class="stop-btn"
+                >
+
+                    🔕 Stop Alarm
+
+                </button>
+
+            </div>
+
+
+
+            
+            <div class="info-box">
+
+
+                <span>
+                    💡
+                </span>
+
+
+                <p>
+                    This is Offline Mode.
+                    Your alarm uses your
+                    laptop's system time and
+                    does not require internet.
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+   
+
+    <script
+        type="module"
+        src="../js/offline/offline-alarm.js"
+    ></script>
+
+
+</body>
+
+</html>

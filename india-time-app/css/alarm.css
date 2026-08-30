@@ -1,0 +1,1377 @@
+
+
+
+.alarm-container {
+
+    min-height:
+        calc(100vh - 90px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding:
+        40px 20px;
+
+}
+
+
+
+.alarm-card {
+
+    position: relative;
+
+    width:
+        min(850px, 100%);
+
+    padding:
+        42px;
+
+    border-radius:
+        38px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.16),
+            rgba(255,255,255,0.055)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,0.22);
+
+    backdrop-filter:
+        blur(35px);
+
+    -webkit-backdrop-filter:
+        blur(35px);
+
+    box-shadow:
+
+        0 35px 100px
+        rgba(0,0,0,0.45),
+
+        inset 0 1px 1px
+        rgba(255,255,255,0.20);
+
+    overflow: hidden;
+
+}
+
+
+
+.alarm-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    left: 50%;
+
+    top: 45%;
+
+    transform:
+        translate(-50%, -50%);
+
+    background:
+        conic-gradient(
+            #06b6d4,
+            #3b82f6,
+            #8b5cf6,
+            #ec4899,
+            #f97316,
+            #06b6d4
+        );
+
+    filter:
+        blur(120px);
+
+    opacity:
+        0.15;
+
+    pointer-events:
+        none;
+
+}
+
+
+
+.alarm-header {
+
+    position:
+        relative;
+
+    text-align:
+        center;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.alarm-icon-large {
+
+    width:
+        72px;
+
+    height:
+        72px;
+
+    margin:
+        0 auto 18px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(236,72,153,0.25),
+            rgba(139,92,246,0.25),
+            rgba(59,130,246,0.25)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    font-size:
+        35px;
+
+    box-shadow:
+        0 15px 45px
+        rgba(139,92,246,0.20);
+
+}
+
+
+.alarm-label {
+
+    color:
+        #f9a8d4;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        3px;
+
+    margin-bottom:
+        9px;
+
+}
+
+
+.alarm-header h1 {
+
+    color:
+        white;
+
+    font-size:
+        clamp(30px, 5vw, 45px);
+
+    margin:
+        0 0 8px;
+
+}
+
+
+.alarm-description {
+
+    color:
+        #cbd5e1;
+
+    font-size:
+        14px;
+
+    margin:
+        0;
+
+}
+
+
+
+.current-online-time {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    padding:
+        17px 20px;
+
+    margin-bottom:
+        25px;
+
+    border-radius:
+        20px;
+
+    background:
+        rgba(34,211,238,0.07);
+
+    border:
+        1px solid
+        rgba(34,211,238,0.18);
+
+}
+
+
+.ist-left {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+}
+
+
+.ist-flag {
+
+    font-size:
+        28px;
+
+}
+
+
+.ist-left small {
+
+    display:
+        block;
+
+    color:
+        #94a3b8;
+
+    font-size:
+        11px;
+
+    margin-bottom:
+        3px;
+
+}
+
+
+.ist-left strong {
+
+    display:
+        block;
+
+    color:
+        #e2e8f0;
+
+    font-size:
+        12px;
+
+}
+
+
+.ist-clock {
+
+    color:
+        white;
+
+    font-size:
+        25px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+
+.alarm-form {
+
+    position:
+        relative;
+
+}
+
+
+.alarm-input-section {
+
+    margin-bottom:
+        18px;
+
+}
+
+
+.alarm-input-section label {
+
+    display:
+        block;
+
+    color:
+        #cbd5e1;
+
+    font-size:
+        13px;
+
+    font-weight:
+        600;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.alarm-input-section input[type="time"],
+.alarm-input-section input[type="text"] {
+
+    width:
+        100%;
+
+    height:
+        55px;
+
+    padding:
+        0 16px;
+
+    box-sizing:
+        border-box;
+
+    border-radius:
+        15px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.16);
+
+    outline:
+        none;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    color:
+        white;
+
+    font-size:
+        16px;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.alarm-input-section input::placeholder {
+
+    color:
+        #64748b;
+
+}
+
+
+.alarm-input-section input:focus {
+
+    border-color:
+        #ec4899;
+
+    background:
+        rgba(236,72,153,0.08);
+
+    box-shadow:
+        0 0 25px
+        rgba(236,72,153,0.12);
+
+}
+
+
+
+
+.alarm-input-section
+input[type="time"]::-webkit-calendar-picker-indicator {
+
+    filter:
+        invert(1);
+
+    cursor:
+        pointer;
+
+}
+
+
+
+.tone-row {
+
+    width:
+        100%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+}
+
+
+.tone-row select {
+
+    flex:
+        1;
+
+    height:
+        55px;
+
+    padding:
+        0 16px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.16);
+
+    border-radius:
+        15px;
+
+    outline:
+        none;
+
+    background:
+        rgba(15,23,42,0.92);
+
+    color:
+        white;
+
+    font-size:
+        15px;
+
+    cursor:
+        pointer;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.tone-row select:hover {
+
+    border-color:
+        rgba(236,72,153,0.45);
+
+}
+
+
+.tone-row select:focus {
+
+    border-color:
+        #ec4899;
+
+    box-shadow:
+        0 0 20px
+        rgba(236,72,153,0.15);
+
+}
+
+
+.tone-row select option {
+
+    background:
+        #15152b;
+
+    color:
+        white;
+
+}
+
+
+
+.preview-tone-btn {
+
+    height:
+        55px;
+
+    padding:
+        0 20px;
+
+    border:
+        none;
+
+    border-radius:
+        15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #06b6d4,
+            #3b82f6
+        );
+
+    color:
+        white;
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+    white-space:
+        nowrap;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.preview-tone-btn:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(59,130,246,0.25);
+
+}
+
+
+.preview-tone-btn:active {
+
+    transform:
+        scale(0.97);
+
+}
+
+
+.custom-tone-wrapper {
+
+    margin-top:
+        12px;
+
+    padding:
+        17px;
+
+    border-radius:
+        17px;
+
+    background:
+        rgba(236,72,153,0.07);
+
+    border:
+        1px solid
+        rgba(236,72,153,0.18);
+
+    animation:
+        toneAppear 0.25s ease;
+
+}
+
+
+@keyframes toneAppear {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(-5px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+.custom-tone-title {
+
+    color:
+        white;
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+    margin-bottom:
+        5px;
+
+}
+
+
+.custom-tone-info {
+
+    color:
+        #94a3b8;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.5;
+
+    margin:
+        0 0 10px;
+
+}
+
+
+#custom-tone {
+
+    width:
+        100%;
+
+    box-sizing:
+        border-box;
+
+    padding:
+        11px;
+
+    border-radius:
+        12px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    background:
+        rgba(255,255,255,0.06);
+
+    color:
+        #cbd5e1;
+
+    font-size:
+        12px;
+
+}
+
+
+
+
+.hidden {
+
+    display:
+        none !important;
+
+}
+
+
+
+.add-alarm-btn {
+
+    width:
+        100%;
+
+    height:
+        57px;
+
+    margin-top:
+        4px;
+
+    border:
+        none;
+
+    border-radius:
+        16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ec4899,
+            #8b5cf6,
+            #3b82f6
+        );
+
+    color:
+        white;
+
+    font-size:
+        15px;
+
+    font-weight:
+        800;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+        0 12px 35px
+        rgba(139,92,246,0.25);
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.add-alarm-btn:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 17px 40px
+        rgba(236,72,153,0.30);
+
+}
+
+
+.add-alarm-btn:active {
+
+    transform:
+        scale(0.98);
+
+}
+
+
+
+
+.alarm-status {
+
+    position:
+        relative;
+
+    text-align:
+        center;
+
+    min-height:
+        18px;
+
+    margin:
+        17px 0;
+
+    color:
+        #86efac;
+
+    font-size:
+        13px;
+
+}
+
+
+
+
+.alarm-list-section {
+
+    position:
+        relative;
+
+    margin-top:
+        28px;
+
+    padding-top:
+        25px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.10);
+
+}
+
+
+.alarm-list-header {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+.list-small {
+
+    color:
+        #67e8f9;
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2px;
+
+}
+
+
+.alarm-list-header h2 {
+
+    margin:
+        4px 0 0;
+
+    color:
+        white;
+
+    font-size:
+        21px;
+
+}
+
+
+.alarm-count {
+
+    min-width:
+        36px;
+
+    height:
+        36px;
+
+    padding:
+        0 8px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(139,92,246,0.15);
+
+    border:
+        1px solid
+        rgba(139,92,246,0.25);
+
+    color:
+        #c4b5fd;
+
+    font-weight:
+        800;
+
+}
+
+
+
+.alarm-list {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        12px;
+
+}
+
+
+.alarm-item {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        15px;
+
+    padding:
+        17px;
+
+    border-radius:
+        19px;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.11);
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.alarm-item:hover {
+
+    background:
+        rgba(255,255,255,0.09);
+
+}
+
+
+.alarm-disabled {
+
+    opacity:
+        0.45;
+
+}
+
+
+.alarm-details {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        13px;
+
+}
+
+
+.alarm-item-icon {
+
+    width:
+        44px;
+
+    height:
+        44px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(236,72,153,0.22),
+            rgba(139,92,246,0.22)
+        );
+
+    font-size:
+        20px;
+
+}
+
+
+.alarm-time {
+
+    color:
+        white;
+
+    font-size:
+        24px;
+
+    font-weight:
+        800;
+
+}
+
+
+.alarm-name {
+
+    margin-top:
+        3px;
+
+    color:
+        #cbd5e1;
+
+    font-size:
+        12px;
+
+}
+
+
+.alarm-tone-name {
+
+    margin-top:
+        5px;
+
+    color:
+        #67e8f9;
+
+    font-size:
+        11px;
+
+}
+
+
+
+.alarm-actions {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+}
+
+
+.toggle-alarm-btn,
+.delete-alarm-btn {
+
+    width:
+        40px;
+
+    height:
+        40px;
+
+    border:
+        none;
+
+    border-radius:
+        12px;
+
+    cursor:
+        pointer;
+
+    transition:
+        0.2s ease;
+
+}
+
+
+.toggle-alarm-btn {
+
+    background:
+        rgba(34,211,238,0.10);
+
+    color:
+        white;
+
+    font-size:
+        17px;
+
+}
+
+
+.toggle-alarm-btn:hover {
+
+    background:
+        rgba(34,211,238,0.20);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.delete-alarm-btn {
+
+    background:
+        rgba(239,68,68,0.10);
+
+    color:
+        #fca5a5;
+
+    font-size:
+        16px;
+
+}
+
+
+.delete-alarm-btn:hover {
+
+    background:
+        rgba(239,68,68,0.22);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.empty-alarm {
+
+    text-align:
+        center;
+
+    padding:
+        35px 20px;
+
+    border-radius:
+        18px;
+
+    background:
+        rgba(255,255,255,0.035);
+
+    border:
+        1px dashed
+        rgba(255,255,255,0.12);
+
+}
+
+
+.empty-icon {
+
+    font-size:
+        35px;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.empty-alarm h3 {
+
+    color:
+        #e2e8f0;
+
+    font-size:
+        16px;
+
+    margin:
+        0 0 5px;
+
+}
+
+
+.empty-alarm p {
+
+    color:
+        #64748b;
+
+    font-size:
+        12px;
+
+    margin:
+        0;
+
+}
+
+
+
+.stop-alarm-btn {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    height:
+        57px;
+
+    margin-top:
+        20px;
+
+    border:
+        none;
+
+    border-radius:
+        16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ef4444,
+            #dc2626
+        );
+
+    color:
+        white;
+
+    font-size:
+        15px;
+
+    font-weight:
+        800;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+        0 12px 35px
+        rgba(239,68,68,0.25);
+
+}
+
+
+
+
+.alarm-footer {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        8px;
+
+    margin-top:
+        25px;
+
+    color:
+        #64748b;
+
+    font-size:
+        10px;
+
+}
+
+
+
+@media (max-width: 600px) {
+
+    .alarm-container {
+
+        padding:
+            25px 12px;
+
+    }
+
+
+    .alarm-card {
+
+        padding:
+            28px 17px;
+
+        border-radius:
+            30px;
+
+    }
+
+
+    .tone-row {
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .tone-row select,
+    .preview-tone-btn {
+
+        width:
+            100%;
+
+    }
+
+
+    .current-online-time {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        gap:
+            10px;
+
+    }
+
+
+    .ist-clock {
+
+        font-size:
+            21px;
+
+    }
+
+
+    .alarm-item {
+
+        padding:
+            13px;
+
+    }
+
+
+    .alarm-time {
+
+        font-size:
+            20px;
+
+    }
+
+
+    .alarm-actions {
+
+        flex-shrink:
+            0;
+
+    }
+
+
+    .alarm-footer {
+
+        flex-wrap:
+            wrap;
+
+    }
+
+}

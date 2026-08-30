@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Offline Time • India Time</title>
+
+    <link
+        rel="stylesheet"
+        href="./css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./css/offline.css"
+    >
+
+</head>
+
+<script type="module" src="./js/offline/offline-time.js"></script>
+
+
+<body>
+
+
+    
+
+    <div class="liquid-bg">
+
+        <div class="blob blob-one"></div>
+        <div class="blob blob-two"></div>
+        <div class="blob blob-three"></div>
+        <div class="blob blob-four"></div>
+
+    </div>
+
+
+
+   
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <span>🇮🇳</span>
+
+            <span>
+                India Time
+            </span>
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="./offline.html"
+               class="active">
+
+                📴 Offline
+
+            </a>
+
+
+            <a href="./offline/offline-timer.html">
+
+                ⏱️ Timer
+
+            </a>
+
+
+            <a href="./offline/offline-alarm.html">
+
+                ⏰ Alarm
+
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    
+
+    <main class="offline-container">
+
+
+        <section class="offline-card">
+
+
+            <!-- STATUS -->
+
+            <div class="offline-status">
+
+                <span class="status-dot"></span>
+
+                OFFLINE MODE
+
+            </div>
+
+
+
+            <!-- ICON -->
+
+            <div class="offline-icon">
+
+                📴
+
+            </div>
+
+
+
+            <!-- TITLE -->
+
+            <p class="country">
+
+                INDIA • OFFLINE CLOCK
+
+            </p>
+
+
+            <h1 id="system-time">
+
+                --:--:--
+
+            </h1>
+
+
+            <h2 id="system-date">
+
+                Loading date...
+
+            </h2>
+
+
+
+            <!-- INFO -->
+
+            <div class="offline-info">
+
+                <div class="info-icon">
+                    💻
+                </div>
+
+                <div>
+
+                    <strong>
+                        System Time
+                    </strong>
+
+                    <p>
+                        Internet connection is not required.
+                        This mode uses your laptop's system clock.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            
+
+            <div class="mode-switch-card">
+
+                <div>
+
+                    <span class="switch-title">
+                        Want accurate India Time?
+                    </span>
+
+                    <span class="switch-description">
+                        Connect to the internet and switch to Online Mode.
+                    </span>
+
+                </div>
+
+
+                <button
+                    id="online-mode-btn"
+                    class="online-mode-btn"
+                    type="button"
+                >
+
+                    🌐 Go Online
+
+                </button>
+
+            </div>
+
+
+
+           
+            <p
+                id="connection-status"
+                class="connection-status"
+            >
+
+                Checking connection...
+
+            </p>
+
+
+        </section>
+
+    </main>
+
+
+
+ 
+    <script
+        type="module"
+        src="./js/mode/modeManager.js"
+    ></script>
+
+
+</body>
+
+</html>
